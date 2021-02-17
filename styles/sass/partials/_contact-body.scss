@@ -1,0 +1,242 @@
+.contact-page {
+  position: relative;
+}
+
+
+header {
+  background-image: url(./contact-header.jpg);
+  background-size: cover;
+  height: 65vh;
+  display: flex;
+
+  @include tabletMQ {
+    height: 25vh;
+  }
+}
+
+/* ******FORM CONTAINER***** */
+.message-container {
+  width: 60%;
+  position: absolute;
+  right: 80px;
+  top: 180px;
+
+  @include tabletMQ {
+    position: relative;
+    top: -80px;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.message-container h2 {
+  font-size: 7.5rem;
+  color: $baseFontColor;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+
+  @include tabletMQ {
+    padding-bottom: 0;
+   font-size: 6.7rem;
+  }
+   @media(max-width: 600px) {
+    font-size: 5.2rem;
+  }
+}
+
+
+.message-container form {
+  background-color: #0f614e;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: -40px 40px #86e0f9;
+  
+   @include tabletMQ {
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+   @media(max-width: 600px) {
+    width: 100%;
+    box-shadow: -20px 20px #86e0f9;
+  }
+}
+
+.message-container input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 2px solid #86e0f9;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  max-width: 25rem;
+  margin: 100px 80px 30px 80px;
+  flex-wrap: wrap;
+
+  @media(max-width: 1391px) {
+    max-width: 24rem;
+  }
+  
+  @media(max-width: 1142px){
+    width: 19.5rem;
+  }
+
+  @include tabletMQ {
+    max-width: 40rem;
+    width: 75%;
+    margin: 50px;
+  }
+
+}
+
+
+input[type='text'] {
+  padding:  10px 20px;
+  margin-bottom: 40px;
+
+   @media(max-width: 1391px) {
+    margin-right: 20px;
+  }
+
+   @media(max-width: 600px) {
+    width: 30rem;
+    margin: 50px 0;
+    padding: 10 0;
+  }
+
+}
+input[type='email'] {
+  padding: 10px 20px;
+  margin-left: 25px;
+
+  @include tabletMQ {
+    width: 50rem;
+    margin: 50px;
+  }
+   @media(max-width: 600px) {
+    width: 30rem;
+    margin: 50px 0;
+    padding: 10 0;
+  }
+}
+.contact-message-form textarea[name='userFeedback'] {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #86e0f9;
+  padding: 20px 20px;
+  margin: 30px 0 0 80px;
+  font-family: $fontLato;
+
+   @include tabletMQ {
+    width: 70%;
+    margin: 50px;
+  }
+@media(max-width: 600px) {
+    width: 30rem;
+    margin: 50px 0;
+  }
+  
+}
+.contact-message-form textarea {
+  resize: none;
+  width: calc(62rem + 40px);
+  height: 250px;
+
+  @media(max-width: 1391px) {
+    width: calc(48rem + 40px);
+  }
+   @media(max-width: 1259px) {
+    width: calc(44rem + 40px);
+  }
+}
+.submit-form button {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-family: $fontBarlow;
+  background-color: #0c1423;
+  border: 3px solid #0c1423;
+  width: calc(62rem + 40px);
+  padding: 5px 0;
+  margin: 50px 80px;
+
+  @media(max-width: 1391px) {
+    width: calc(54rem + 40px);
+  }
+
+  @media(max-width: 1259px) {
+    width: calc(44rem + 40px);
+  }
+
+  @include tabletMQ {
+    width: 70%;
+  }
+  @include mobiletMQ{
+    width: 50%;
+    margin: 30px 0;
+  }
+}
+.submit-form button:hover{
+  background-color:#86e0f9;
+  color: #0c1423;
+}
+/* *****CONTACT INFO***** */
+.contact-info-container {
+  background-color: #0c1423;
+  height: 50vh;
+  @media(max-width:1100px) {
+    height: 40vh;
+    text-align: center;
+  }
+}
+.social-icons,
+.address-container {
+  margin-left: 8%;
+  @media(max-width:1100px) {
+    margin-left: 0;
+  }
+}
+.social-icons i {
+  margin-top: 230px;
+  font-size: 2.3rem;
+  color: white;
+  padding-right: 12px;
+
+  @media(max-width:1100px){
+    margin-top: 55px;
+    font-size: 4rem;
+  }
+  @include tabletMQ {
+    font-size: 3rem;
+  }
+}
+.address-container a {
+  font-size: 2.2rem;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+  font-family: $fontBarlow;
+
+  @media(max-width:1100px) {
+    font-size: 3rem;
+  }
+
+  @include tabletMQ {
+    font-size: 2rem;
+  }
+}
+.address-container p {
+  font-size: 1.7rem;
+  line-height: 29px;
+  @media(max-width:1100px) {
+    font-size: 2.5rem;
+  }
+  @include tabletMQ{
+    font-size: 1.5rem;
+  }
+}

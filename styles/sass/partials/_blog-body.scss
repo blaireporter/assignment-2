@@ -1,0 +1,394 @@
+body {
+  background-color: $primaryColor;
+}
+//CONTAINER
+.blog-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: 950px) {
+    flex-direction: column;
+    
+  }
+}
+
+// RIGHT SIDE BLOG POST SECTION
+.blog-post-section {
+  width: 59%;
+  margin-top: -325px;
+  @media (max-width: 950px) {
+
+    width: 100%;
+    margin-top: -80px;
+    padding-top: 40px;
+  }
+
+  .right-side img {
+    box-shadow: -40px 40px $accentColor;
+    display: block;
+    height: auto;
+    @media(max-width: 950px) {
+      box-shadow: -20px 20px $accentColor;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      // margin-top: 100px;
+    }
+  }
+
+  .right-side h2 {
+    margin-bottom: 20px;
+
+    @media (max-width: 950px) {
+      margin-top: -250px;
+      text-align: center;
+      margin-left: 0%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .discovery-section {
+    // max-width: 800px;
+    width: 100%;
+    padding: 6rem 3rem 2rem 5rem;
+    margin-left: -40px;
+    border-left: 5px solid $accentColor;
+    border-bottom: 5px solid $accentColor;
+    border-top: 5px solid $accentColor;
+    @media (max-width: 950px) {
+      border: none;
+      margin: 0 auto;
+      max-width: 800px;
+      margin-top: 50px;
+      margin-left: 10%;
+    }
+    @include tabletMQ {
+      max-width: calc(100% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+.discovery-section h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  @media(max-width: 950px) {
+    font-size: 4rem;
+    margin-top: 0;
+  }
+  @include mobiletMQ {
+    font-size: 3rem;
+  }
+}
+
+.discovery-section p {
+  font-size: 1.8rem;
+  max-width: 680px;
+  @media(max-width: 950px) {
+    font-size: 1.7rem;
+    margin-top: 0;
+  }
+
+  @include tabletMQ {
+    font-size: 1.7rem;
+    max-width: 80%;
+  }
+}
+
+.discovery-section :nth-child(2) {
+  margin-bottom: 40px;
+}
+
+//LEFT SIDE BLOG POST SECTION
+
+.side-blog-section {
+  width: calc(35% - 80px);
+  margin-right: 100px;
+  max-width: 400px;
+  margin-top: 110px;
+  position: relative;
+  width: 100%;
+  @media(max-width: 950px) {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.side-blog-image {
+  position: absolute;
+  display: block;
+  left: 0;
+  margin-top: 90px;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1;
+
+  @media(max-width:950px) {
+    margin-top: 10px;
+  }
+}
+.side-blog-image img {
+  max-width: 100%;
+  width: 450px;
+
+  @media(max-width: 1300px){
+    max-width: 420px;
+  }
+   @media(max-width:950px) {
+      margin: 0 auto;
+      max-width: 600px;
+      box-shadow: -20px 20px $accentColor;
+   }
+}
+
+.side-blog-content {
+  padding: 400px 0 30px 25px;
+  background-color: $secondaryColor;
+  margin-left: 30px;
+
+  @media(max-width:950px) {
+      margin-left: 0;
+      padding: 0 auto;
+      text-align: center;
+   }
+
+  @include mobiletMQ {
+    // margin-top: 150px;
+  }
+}
+
+.side-blog-content h4 {
+  font-size: 2.2rem;
+
+  @media(max-width:950px) {
+      font-size: 3rem;
+   }
+}
+
+h4:last-of-type {
+  margin: 60px 0 20px 0;
+}
+
+.side-blog-content ul li p:before {
+    content:"•";
+    font-size:10px;
+    padding-right: 20px;
+
+    @media(max-width:950px) {
+      padding: 0 auto;
+      
+   }
+}
+
+
+.side-blog-content p {
+  font-size: 1.8rem;
+  max-width: 300px;
+  
+  @media(max-width:950px) {
+      max-width: 100%;
+      margin-left: 0;
+      padding: 0 50px;
+   }
+}
+
+.side-blog-content ul li {
+  margin-left: 10px;
+  @media(max-width:950px) {
+      margin: 0;
+   }
+}
+
+// COMMENTS SECTION
+.comments-container {
+  max-width: 800px;
+  padding: 30px 0 50px 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 100px;
+
+  @include tabletMQ {
+    margin-right: 0;
+  }
+
+  .comments-title {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+  }
+
+  .comments-section h3{
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+  }
+
+  .profile-picture img {
+    width: 100%;
+    margin-right: 5px;
+    margin-top: 10px;;
+  }
+  .comment-content {
+    width: 100%;
+    padding-left: 30px;
+  }
+}
+
+.comment-content p{
+  font-size: 1.8rem;
+  line-height: 28px;
+}
+
+.one p:first-child,
+.two p:first-child {
+  padding-bottom: 10px;
+}
+
+.pic-two,
+.two {
+  margin-top: 55px;
+}
+
+// *****form section*****
+
+.contact-section {
+  max-width: 61%;
+  margin-right: 10px;
+  height: 60vh;
+
+  @media(max-width: 1255px){
+    margin-left: 25%;
+
+    @include tabletMQ {
+      max-width: 100%;
+      margin-left: 23%;
+      margin-right: 0;
+      height: 95vh;
+    }
+  }
+
+  .myForm2 {
+    font-size: 2rem;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 85%;
+
+    @include tabletMQ {
+      max-width: 100%;
+    }
+
+    @include mobiletMQ{
+
+    }
+  }
+
+.myForm2 input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 2px solid #86e0f9;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  max-width: 30rem;
+  margin-left: 0px;
+
+   @media(max-width: 1255px){
+    max-width: 24rem;
+  }
+
+  @include tabletMQ {
+      max-width: 60rem;
+    }
+    @include smallMQ {
+    max-width: 30rem;
+  }
+}
+
+.myForm2 input[type='text'] {
+  @include tabletMQ {
+    width: 50rem;
+  }
+   @include mobiletMQ {
+    width: 40rem;
+  }
+   @include smallMQ {
+    width: 30rem;
+  }
+}
+
+.myForm2 input[type='email'] {
+  margin-left: 30px;
+
+  @include tabletMQ {
+    margin-left: 0px;
+  }
+  @include mobiletMQ {
+    width: 40rem;
+  }
+   @include smallMQ {
+    width: 30rem;
+  }
+}
+
+.blog-message-form textarea[name='userFeedback'] {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #86e0f9;
+  padding: 20px 20px;
+  margin: 30px 0 0 0px;
+  font-family: $fontLato;
+}
+.blog-message-form textarea {
+  resize: none;
+  width: 68rem;
+  height: 250px;
+
+   @media(max-width: 1255px){
+    width: 53rem;
+  }
+
+   @include tabletMQ {
+    width: 50rem;
+    height: 200px;
+  }
+  @include mobiletMQ {
+    width: 40rem;
+  }
+   @include smallMQ {
+    width: 30rem;
+  }
+}
+
+  .blog-submit-form button {
+    font-size: 2rem;
+    color: white;
+    margin-top: 50px;
+    width: 68rem;
+    background-color: $secondaryColor;
+    text-transform: uppercase;
+    // margin-left: 50px;
+     @media(max-width: 1255px){
+    width: 53rem;
+  }
+   @include tabletMQ {
+    width: 50rem;
+  }
+  @include mobiletMQ {
+    width: 40rem;
+  }
+
+  @include smallMQ {
+    width: 30rem;
+  }
+  }
+  .blog-submit-form button:hover,
+  .blog-submit-form button:focus {
+    background-color: #86e0f9;
+    color: #0c1423;
+  }
+}

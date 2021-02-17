@@ -1,0 +1,161 @@
+header {
+  background-image: url(../assets/header-image.jpg);
+  background-position: center center;
+  background-size: cover;
+@include mobiletMQ {
+  overflow: hidden;
+}
+
+  .home-box-header-img {
+    position: absolute;
+    bottom: -35%;
+    right: 0;
+    @media(max-width: 1300px) {
+      max-width: 750px;
+    }
+    @include tabletMQ {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: 175px;
+      max-width: 400px;
+      width: 100%;
+      bottom: 50%;
+    }
+    @media(max-width:850px){
+      max-width: 380px;
+    }
+    @include mobiletMQ {
+      margin-top: 45px;
+    }
+    @include smallMQ {
+      margin-top: 65px;
+      max-width: 250px;
+
+    }
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    height: inherit;
+    padding-left: 10px;
+    height: 100vh;
+    width: 100%;
+    @include mobiletMQ {
+      height: 60vh;
+    }
+  }
+}
+
+h1 {
+  @include headingSize($fontBarlow, 138px, 126px);
+  text-transform: uppercase;
+}
+
+h2 {
+  @include headingSize($fontBarlow, 80px, 92px);
+  text-transform: uppercase;
+}
+
+h3 {
+  @include elementSize($fontBarlow, 42px, 1px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h4 {
+  @include elementSize($fontBarlow, 32px, 1px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+nav {
+  @include headingSize($fontBarlow, 20px, 29px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+button {
+  @include headingSize($fontBarlow, 20px, 32px);
+  letter-spacing: 1px;
+  background-color: $accentColor;
+  padding: 10px 15px;
+  border: none;
+  margin-top: 30px;
+}
+
+body {
+  @include headingSize($fontLato, 20px, 32px);
+  color: white;
+}
+
+.header-section-img {
+  background-image: url(../assets/header-image.jpg);
+  height: 100vh;
+  @include tabletMQ {
+    height: 80vh;
+  }
+  @include mobiletMQ {
+    height: 60vh;
+  }
+  @include smallMQ {
+    height: 50vh;
+    z-index: 2;
+  }
+  & h1 {
+    margin-top: 100px;
+    @include tabletMQ {
+    font-size: 10rem;
+    line-height: 100px;
+    margin-top: 60px;
+    }
+    // @media(max-width: 850px) {
+    //   font-size: 7rem;
+    //   list-height: 50px;
+
+    // }
+    @include mobiletMQ {
+      font-size: 7rem;
+      line-height: 70px;
+      margin-top: -100px;
+
+    }
+    // @include smallMQ {
+    //   font-size: 70px;
+    //   line-height: 70px;
+    // }
+  }
+}
+
+.blog-page {
+  background-image: url(../assets/blog-header.jpg);
+  display: flex;
+
+  @media(max-width: 1300px){
+    height: 65vh;
+  }
+}
+
+.contact-page {
+  background-image: url(../assets/contact-header.jpg);
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: $primaryColor;
+  color: white;
+}
+
+.skip-link:focus {
+  font-size: 2.5rem;
+  top: 10px;
+  left: 0;
+  padding: 10px;
+  box-shadow: 7px 7px $accentColor;
+}
