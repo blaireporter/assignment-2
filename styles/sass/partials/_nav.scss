@@ -64,7 +64,6 @@ nav {
   display: flex;
 }
 
-.dropdown-menu li:hover .sub-menu,
 .dropdown-menu li:focus-within .sub-menu {
   height: auto;
   overflow: auto;
@@ -75,5 +74,6 @@ nav {
   border-left: 3px solid #86e0f9;
   border-bottom: 3px solid #86e0f9;
   z-index: 2;
+  display: none;
 }
 }
