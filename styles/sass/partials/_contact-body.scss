@@ -37,7 +37,7 @@ header {
 
   @include tabletMQ {
     padding-bottom: 0;
-   font-size: 6.7rem;
+   font-size: 6rem;
   }
    @media(max-width: 600px) {
     font-size: 5.2rem;
@@ -51,12 +51,13 @@ header {
   font-family: 'Barlow', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: -40px 40px #86e0f9;
-  
+  box-shadow: -40px 40px #86e0f9;  
+
    @include tabletMQ {
     flex-direction: column;
     text-align: center;
     justify-content: flex-start;
+    box-shadow: -30px 30px #86e0f9; 
   }
 
    @media(max-width: 600px) {
@@ -77,6 +78,7 @@ header {
   flex-wrap: wrap;
 
   @media(max-width: 1391px) {
+    margin-top: 50px;
     max-width: 24rem;
   }
   
@@ -149,9 +151,11 @@ input[type='email'] {
 
   @media(max-width: 1391px) {
     width: calc(48rem + 40px);
+    height: 200px;
   }
    @media(max-width: 1259px) {
     width: calc(44rem + 40px);
+
   }
 }
 .submit-form button {
@@ -188,9 +192,10 @@ input[type='email'] {
 /* *****CONTACT INFO***** */
 .contact-info-container {
   background-color: #0c1423;
-  height: 50vh;
+  height: 100%;
+  margin-bottom: 100px;
   @media(max-width:1100px) {
-    height: 40vh;
+    height: 100%;
     text-align: center;
   }
 }

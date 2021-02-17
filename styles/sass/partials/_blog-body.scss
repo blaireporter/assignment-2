@@ -124,7 +124,7 @@ body {
   margin-top: 90px;
   width: 100%;
   max-width: 100%;
-  z-index: 1;
+  z-index: 5;
 
   @media(max-width:950px) {
     margin-top: 10px;
@@ -256,7 +256,7 @@ h4:last-of-type {
 .contact-section {
   max-width: 61%;
   margin-right: 10px;
-  height: 60vh;
+  height: 100%;
 
   @media(max-width: 1255px){
     margin-left: 25%;

@@ -7,7 +7,6 @@ hamburgerMenu.addEventListener("click", function(event){
     } else {
         subMenu.style.display = "block";
     }
-
 });
 
 
